@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "827729109414",
+    "firebase_url": "https://potion-collector-b88fb-default-rtdb.firebaseio.com",
+    "project_id": "potion-collector-b88fb",
+    "storage_bucket": "potion-collector-b88fb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827729109414:android:5b1df19f7e8f56a6fb6f67",
+        "android_client_info": {
+          "package_name": "com.yash.PotionCollector"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAraI-Cn8opHMC6AClhDXU_3cCEjkPwLKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
