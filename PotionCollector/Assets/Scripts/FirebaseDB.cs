@@ -42,7 +42,7 @@ public class FirebaseDB : MonoBehaviour
     {
         ScoreData scoreData = new ScoreData();
         scoreData.id = DataManager.id.ToString();
-        scoreData.score = score.ToString();
+        scoreData.score = score.ToString("D3");
         scoreData.sessionStartTime = DataManager.sessionStartTime.ToString();
         scoreData.sessionEndTime = time.ToString();
 
@@ -78,6 +78,7 @@ public class FirebaseDB : MonoBehaviour
 
                         scoreData.Add(sd);
                     }
+                    scoreData.Sort((a, b) => b.score.CompareTo(a.score));
 
                     GameEvents.OnLeaderBoredLoaded.Invoke(scoreData);
                 }

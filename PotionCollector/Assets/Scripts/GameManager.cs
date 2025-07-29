@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     TextMeshProUGUI txtScore,txtTimer,txtFinalScore;
     [SerializeField]
     GameObject startMenu,gameOver;
+    [SerializeField]
+    LeaderBoard lb;
 
     string sessionIdKey="SessionIdKey";
 
@@ -67,7 +69,10 @@ public class GameManager : MonoBehaviour
     {
         txtTimer.text = "Time Left : " + timeLeft + "sec";
         if (timeLeft <= 0)
-            GameEvents.OnGameEnded.Invoke(DateTime.Now,DataManager.score);
+        {
+            GameEvents.OnGameEnded.Invoke(DateTime.Now, DataManager.score);
+            yield break;
+        }
         timeLeft--;
         yield return new WaitForSeconds(1);
         StartCoroutine(Timer());
@@ -102,7 +107,7 @@ public class GameManager : MonoBehaviour
 
     private void LeaderBoredLoaded(List<ScoreData> sd)
     {
-        Debug.Log(sd[0].id);
+        lb.ShowData(sd);
     }
 }
 
