@@ -10,6 +10,7 @@
 UserSettings/
 MemoryCaptures/
 x86_64/
+.utmp/
 
 # Uncomment if using Unity Cloud Build
 # /[Cc]ache/

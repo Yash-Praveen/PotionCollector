@@ -5,6 +5,8 @@ public class PotionController : MonoBehaviour
 {
     [SerializeField]
     GameObject[] potionPrefabs;
+    [SerializeField]
+    PotionDetailsScirptable potionDetails;
     Coroutine c;
 
     private void OnEnable()
@@ -32,7 +34,8 @@ public class PotionController : MonoBehaviour
         int potionIndex = Random.Range(0, potionPrefabs.Length);
         float posX = Random.Range(-4.5f, 4.5f);
         float posZ = Random.Range(-4.5f, 4.5f);
-        Instantiate(potionPrefabs[potionIndex],new Vector3(posX,0.5f,posZ),Quaternion.identity);
+        GameObject obj =Instantiate(potionPrefabs[potionIndex],new Vector3(posX,0.5f,posZ),Quaternion.identity);
+        obj.GetComponent<Potion>().SetData(potionDetails.potions[potionIndex]);
         c = StartCoroutine(SpawnPotion());
     }
 

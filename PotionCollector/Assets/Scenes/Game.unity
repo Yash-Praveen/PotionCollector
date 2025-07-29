@@ -1068,6 +1068,7 @@ MonoBehaviour:
   - {fileID: 4795377520925451265, guid: 682d34a587fa73f42995708bc0ce1385, type: 3}
   - {fileID: 4795377520925451265, guid: ca554a785a6025f4e8659f0941352fb7, type: 3}
   - {fileID: 4795377520925451265, guid: 15f67b27b03cc4b48bab69934b44c548, type: 3}
+  potionDetails: {fileID: 11400000, guid: ef1937c5a4e2e2f458f26fe82d2eb009, type: 2}
 --- !u!4 &393400315
 Transform:
   m_ObjectHideFlags: 0

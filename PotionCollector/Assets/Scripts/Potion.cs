@@ -17,4 +17,10 @@ public class Potion : MonoBehaviour
         GameEvents.OnPotionCollected.Invoke(name,points,System.DateTime.Now);
         DestroyImmediate(gameObject);
     }
+
+    public void SetData(PotionData potionData)
+    {
+        this.name = potionData.name;
+        this.points = potionData.potency;
+    }
 }
